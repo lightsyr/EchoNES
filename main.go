@@ -25,4 +25,13 @@ func main() {
 	}
 
 	fmt.Printf("Value at address 0x8000: %x\n", motherboard.Memory.Data[0x8000])
+
+	for {
+		fmt.Printf("PC: 0x%X, Opcode: 0x%X\n", motherboard.CPU.PC, motherboard.Memory.Data[motherboard.CPU.PC])
+
+		if motherboard.CPU.PC == 0xFFFF {
+			fmt.Println("End of ROM reached")
+			break
+		}
+	}
 }

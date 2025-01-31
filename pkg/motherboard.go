@@ -1,10 +1,10 @@
 package motherboard
 
 type Motherboard struct {
-	Cpu    *CPU
+	CPU    *CPU
 	Memory *Memory
 }
 
 func NewMotherboard() *Motherboard {
-	return &Motherboard{Cpu: NewCPU(), Memory: NewMemory()}
+	return &Motherboard{CPU: NewCPU(), Memory: NewMemory()}
 }
